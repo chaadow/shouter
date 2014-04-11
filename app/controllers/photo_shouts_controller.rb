@@ -1,14 +1,5 @@
 class PhotoShoutsController < ApplicationController 
-	def create
-		content = build_content
-		shout = current_user.shouts.build(content: content)
-		if shout.save
-			redirect_to dashboard_path
-		else 
-			flash.alert = "Shout cannot be empty"
-			redirect_to dashboard_path
-		end 
-	end 
+	include Concerns::CreateShout
 
 	private
 
