@@ -1,17 +1,17 @@
 class Dashboard
 	def initialize(user)
-		@user = user 
-	end 
+		@user = user
+	end
 
 	def new_text_shout
 		TextShout.new
-	end 
+	end
 
 	def new_photo_shout
-		TextShout.new
-	end 
+		PhotoShout.new
+	end
 
 	def timeline
 		Timeline.new(@user)
-	end 
-end 
+	end
+end
